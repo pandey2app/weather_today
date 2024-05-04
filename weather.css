@@ -13,3 +13,409 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.main-container {
+    height: 98%;
+    width: 60%;
+    min-width: 490px;
+    min-height: 550px;
+    max-height: 600px;
+    /* border: 1px solid red; */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.4s;
+}
+.home-class{
+    height: 98%;
+    width: 60%;
+    max-height: 600px;
+    overflow: hidden;
+}
+.search-class{
+    width: 60% !important;
+    height: 98% !important;
+    overflow: hidden;
+    max-height: 600px;
+    border: 2px solid red;
+}
+.all-cities-class{
+    width: 90% !important;
+    height: 98% !important;
+    max-height: none;
+    overflow: auto;
+}
+
+.main-container h1, .fa-bars {
+    text-align: center;
+    font-size: 5vw;
+    color: rgb(21, 135, 236);
+    text-shadow: 1px 1px 1px yellow, -1px -1px 1px yellow, 1px -1px 1px yellow, -1px 1px 1px yellow;
+    
+}
+.main-container .fa-bars{
+    font-size: 3.7vw;
+    position: absolute;
+    left: 50px;
+    top: 12px;
+    cursor: pointer;
+    transition: text-shadow 0.2s;
+}
+.main-container .fa-bars:hover{
+    text-shadow: 1px 1px 1px green, -1px -1px 1px green, 1px -1px 1px green, -1px 1px 1px green;
+}
+.main-container .slogan {
+    height: 40px;
+    text-align: center;
+    font-size: 2.3vw;
+    color: rgb(2, 74, 2);
+    margin-top: -6px;
+    margin-bottom: 10px;
+    word-spacing: 10px;
+    font-variant: small-caps;
+    font-family: cursive;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+.main-container .nav-bar-elm{
+    display: flex;
+    justify-content: space-evenly;
+    height: 0px;
+    transition: height 0.2s;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.nav-bar-elm a{
+    background-color: rgb(165, 56, 74, 0.5);
+    font-size: 2vw;
+    font-variant: small-caps;
+    padding: 2px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.nav-bar-elm a:not(.active):hover{
+    border: 2px solid green;
+}
+.active{
+    background-color: rgb(2, 74, 2) !important;
+    color: white;
+}
+.nav-bar-elm a i{
+    rotate: y 180deg;
+    font-size: 20px;
+    color: rgb(255, 255, 255,0.5);
+}
+.main-container .cards-container {
+    border: 2px solid red;
+    height: 60%;
+    max-height: 350px;
+    width: 90%;
+    margin: 6px auto 0px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-container h3 {
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(15, 5, 108);
+    margin: 12px 0px 4px;
+}
+
+.main-container h3 i {
+    font-size: 15px;
+    color: black;
+}
+
+.main-container h3 i#first-arrow {
+    rotate: y 180deg;
+}
+
+.main-container .updates-container {
+    height: 50px;
+    width: 93%;
+    border: 2px solid red;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-container .updates-container img {
+    display: inline-block;
+    height: 100%;
+    width: 7%;
+    border-right: 2px solid rgb(160, 7, 7);
+    background-color: grey;
+    padding: 2px; 
+}
+
+.main-container .updates-container p {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(135, 207, 235, 0.6);
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    word-spacing: 5px;
+}
+.back-to-top{
+    display: none;
+    height: 54px;
+    width: 54px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px black;
+    position: absolute;
+    top: 673px;
+    right: 100px;
+}
+.back-to-top i{
+    display: inline-block;
+    font-size: 55px;
+    margin: auto;
+    cursor: pointer;
+}
+.back-to-top i:hover{
+    color: green;
+}
+/* styling for cards */
+.cards-container .card {
+    width: 45%;
+    height: 45%;
+    border: 1px solid red;
+    border-radius: 15px;
+    background-color: rgb(165, 56, 74, 0.5);
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    width: 90%;
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(43, 4, 90);
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.card .icon-container {
+    position: absolute;
+    right: 40%;
+    top: 22%;
+    width: 20%;
+    height: 60px;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.card .icon-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.card .status-container,
+.card .info {
+    height: 45px;
+    width: 90%;
+    margin: 4px auto 2px;
+}
+
+.card .status-container {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+}
+
+.card .status-container div {
+    width: 30%;
+    height: 100%;
+    border: 2px solid rgb(74, 3, 3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .status-container h4 {
+    font-size: 12px;
+    text-align: center;
+    margin: 2px 0 5px;
+}
+
+.card .status-container div p {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 2px 0;
+}
+
+.card .info {
+    height: 45px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 2px solid rgb(74, 3, 3);
+    text-align: center;
+    padding: 2px;
+    overflow: hidden;
+}
+
+/* styling for cards ends here */
+
+/* search page styling */
+.search-page-container{
+    border: 2px solid red;
+    height: 85% !important;
+    max-height: 440px !important;
+    width: 90%;
+    margin: 6px auto 0px;
+    border-radius: 15px;
+    display: block !important;
+    position: relative;
+}
+.parent-container-search{
+    width: 90%;
+    margin: 4px auto;
+    position: relative;
+}
+.search-container{
+    position: relative;
+    overflow: hidden;
+}
+.search-container input{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.search-container input:focus{
+    background-color : aliceblue;
+}
+.search-container button{
+    background-color: transparent;
+    color: grey;
+    font-size: 2vw;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    border: none;
+}
+.search-container button:hover{
+    color: green;
+    font-size: 2.2vw;
+}
+.parent-container-search .result-container-search{
+    width: 99.8%;
+    max-height: 200px;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    overflow-y: auto;
+    background-color: white;
+}
+.result-container-search ul{
+    list-style-type: none;
+}
+.result-container-search ul li{
+    font-size: 18px;
+    background-color: white;
+    padding: 2px 6px 2px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.result-container-search ul li:hover{
+    background-color: rgb(179, 216, 248);
+    cursor: pointer;
+}
+.heading-container{
+    display: flex;
+    margin-top: 5px;
+    background-color: beige;
+}
+.heading-container h2{
+    width: 90%;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(21, 135, 236);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.heading-container .fav-span{
+    width: 10%;
+    color: goldenrod;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.heading-container .fav-span:hover{
+    font-size: 28px;
+}
+.search-page-container .card-search{
+    width: 90% ;
+    height: 300px;
+    margin: 10px auto 2px;
+}
+.card-search .icon-container {
+    position: absolute;
+    right: 45%;
+    top: 1%;
+    width: 10%;
+    height: 60px;
+    padding: 4px;
+    border-radius: 50%;
+}
+.card-search .status-container h4{
+    font-size: 20px; 
+
+}
+.card-search .status-container div {
+    height: 60px;
+    margin: 5px 0px;
+}
+.card-search .status-container div p{
+    height: 23px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.card-search .info{
+    height: 210px;
+    margin-top: 29px !important;
+    padding: 3px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-search .info div{
+    width: 49.5%;
+    height: 99%;
+    
+}
+.card-search .info div:first-child{
+    border-right: 3px solid green;
+}
+.card-search .info div:last-child{
+    margin-left: 15px !important;
+}
+.card-search .info div p{
+    height: 25px;
+    margin: 7px 0px;
+    text-align: left;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+/* search page styling ends here*/
+
+/* Responsive for tablets*/
+    
