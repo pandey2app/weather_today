@@ -1,6 +1,6 @@
 import majorCities from './cities.js';
 import districts from './districts.js';
-
+import currentLocation from './loader.js';
 
 
 function loader(currentLocation) {
