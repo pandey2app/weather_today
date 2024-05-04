@@ -204,7 +204,6 @@ function navBar() {
 }
 
 //for changing paragraphs of updates on home page
-let interval= null;
 function paragraphAnimator() {
     let i = -1;
     function timer() {
@@ -216,9 +215,8 @@ function paragraphAnimator() {
         span.src = City.updateParagraphs[i].title;
         update.innerText = City.updateParagraphs[i].innerText;
     }
-    if(interval){
-        interval = setInterval(timer, 2000);
-    }
+
+    setInterval(timer, 2000);
 }
 
 export {
@@ -239,6 +237,5 @@ export {
     clearExistng,
     favoriteFinder,
     addData,
-    paragraphAnimator,
-    interval
+    paragraphAnimator
 }
