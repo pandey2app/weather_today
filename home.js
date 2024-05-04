@@ -1,5 +1,5 @@
 import City from "./city.js";
-import { clearExistng,favoriteFinder,addData,paragraphAnimator} from "./loader.js";
+import { clearExistng,favoriteFinder,addData,paragraphAnimator,interval} from "./loader.js";
 import {mainContainer,cardsContainer, homeElm,allCitiesElm,searchCityElm,span,update } from "./loader.js";
 
 function renderHome(currentLocation) {
@@ -16,6 +16,9 @@ function renderHome(currentLocation) {
     searchCityElm.className = '';
     favoriteFinder();
     addData(currentLocation);
+    if(interval){
+        clearInterval(interval);
+    }
     paragraphAnimator();
     let updatesHeading = document.createElement('h3');
     let updatesContainer = document.createElement('div');
