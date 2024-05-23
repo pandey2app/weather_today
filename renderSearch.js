@@ -195,18 +195,18 @@ function renderSearch() {
             humidityDisp.innerText = response.current.humidity;
             tempDisp.innerText = response.current.temp_c;
             img.src = response.current.condition.icon;
-            farhenhiet.innerHTML = `Temperature-F &nbsp;: ${response.current.temp_f}`;
-            feelsLike_f.innerHTML = `FeelsLike-F &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.feelslike_f}`;
-            feelsLike_c.innerHTML = `FeelsLike-C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.feelslike_c}`;
-            windSpeed.innerHTML = `Wind speed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.wind_kph}`;
-            windDir.innerHTML = `Wind direction : ${response.current.wind_dir}`;
-            weatherCondition.innerHTML = `Weather is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.condition.text}`;
-            co.innerHTML = `AQI (Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.air_quality.co}`;
-            no2.innerHTML = `AQI (No<sub>2</sub>) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.air_quality.no2}`;
-            o3.innerHTML = `AQI (O<sub>3</sub>) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.air_quality.o3}`;
-            so2.innerHTML = `AQI (So<sub>2</sub>) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ${response.current.air_quality.so2}`;
-            pm2_5.innerHTML = `AQI (PM 2.5) &nbsp;: ${response.current.air_quality.pm2_5}`;
-            pm10.innerHTML = `AQI (PM 10) &nbsp;&nbsp;: ${response.current.air_quality.pm10}`;
+            farhenhiet.innerHTML = `Temperature-F &nbsp;: <span class="search-page-data">${response.current.temp_f}</span>`;
+            feelsLike_f.innerHTML = `FeelsLike-F &nbsp;: <span class="search-page-data">${response.current.feelslike_f}</span>`;
+            feelsLike_c.innerHTML = `FeelsLike-C&nbsp;: <span class="search-page-data">${response.current.feelslike_c}</span>`;
+            windSpeed.innerHTML = `Wind speed &nbsp;: <span class="search-page-data">${response.current.wind_kph}</span>`;
+            windDir.innerHTML = `Wind direction : <span class="search-page-data">${response.current.wind_dir}</span>`;
+            weatherCondition.innerHTML = `Weather is&nbsp;: <span class="search-page-data">${response.current.condition.text}</span>`;
+            co.innerHTML = `AQI (Co) &nbsp;: <span class="search-page-data">${response.current.air_quality.co}</span>`;
+            no2.innerHTML = `AQI (No<sub>2</sub>) &nbsp;: <span class="search-page-data">${response.current.air_quality.no2}</span>`;
+            o3.innerHTML = `AQI (O<sub>3</sub>) &nbsp;: <span class="search-page-data">${response.current.air_quality.o3}</span>`;
+            so2.innerHTML = `AQI (So<sub>2</sub>) &nbsp;: <span class="search-page-data">${response.current.air_quality.so2}</span>`;
+            pm2_5.innerHTML = `AQI (PM 2.5) &nbsp;: <span class="search-page-data">${response.current.air_quality.pm2_5}</span>`;
+            pm10.innerHTML = `AQI (PM 10) &nbsp;: <span class="search-page-data">${response.current.air_quality.pm10}</span>`;
         });
 
     }
