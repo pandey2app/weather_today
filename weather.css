@@ -2,68 +2,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('./images/bg.jpg');
+    background-image: url("./images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
-.main-container {
+    background-attachment: fixed;
+  }
+  
+  .main-container {
     height: 98%;
     width: 60%;
     min-width: 490px;
     min-height: 550px;
     max-height: 600px;
+    /* border: 1px solid red; */
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    position: relative;
     overflow: hidden;
-    transition:  width 0.4s, max-height 0.4s; 
-}
-.home-class{
+    transition: all 0.4s;
+  }
+  .home-class {
     height: 98%;
     width: 60%;
     max-height: 600px;
     overflow: hidden;
-}
-.search-class{
+  }
+  .search-class {
     width: 60% !important;
     height: 98% !important;
     overflow: hidden;
     max-height: 600px;
-}
-.all-cities-class{
+    border: 2px solid red;
+  }
+  .all-cities-class {
     width: 90% !important;
     height: 98% !important;
     max-height: none;
     overflow: auto;
-}
-
-.main-container h1, .fa-bars {
+  }
+  
+  .main-container h1,
+  .fa-bars {
     text-align: center;
     font-size: 5vw;
     color: rgb(21, 135, 236);
-    text-shadow: 1px 1px 1px yellow, -1px -1px 1px yellow, 1px -1px 1px yellow, -1px 1px 1px yellow;
-    
-}
-.main-container .fa-bars{
+    text-shadow: 1px 1px 1px yellow, -1px -1px 1px yellow, 1px -1px 1px yellow,
+      -1px 1px 1px yellow;
+  }
+  .main-container .fa-bars {
     font-size: 3.7vw;
     position: absolute;
     left: 50px;
     top: 12px;
     cursor: pointer;
     transition: text-shadow 0.2s;
-}
-.main-container .fa-bars:hover{
-    text-shadow: 1px 1px 1px green, -1px -1px 1px green, 1px -1px 1px green, -1px 1px 1px green;
-}
-.main-container .slogan {
+  }
+  .main-container .fa-bars:hover {
+    color: green;
+    text-shadow: 1px 1px 1px red, -1px -1px 1px red, 1px -1px 1px red,
+      -1px 1px 1px red;
+  }
+  .main-container .slogan {
     height: 40px;
     text-align: center;
     font-size: 2.3vw;
@@ -75,16 +83,16 @@ body {
     font-family: cursive;
     overflow: hidden;
     transition: height 0.2s;
-}
-.main-container .nav-bar-elm{
+  }
+  .main-container .nav-bar-elm {
     display: flex;
     justify-content: space-evenly;
     height: 0px;
     transition: height 0.2s;
     overflow: hidden;
     margin-top: 5px;
-}
-.nav-bar-elm a{
+  }
+  .nav-bar-elm a {
     background-color: rgb(165, 56, 74, 0.5);
     font-size: 2vw;
     font-variant: small-caps;
@@ -94,20 +102,20 @@ body {
     border: 2px solid red;
     border-radius: 10px;
     cursor: pointer;
-}
-.nav-bar-elm a:not(.active):hover{
+  }
+  .nav-bar-elm a:not(.active):hover {
     border: 2px solid green;
-}
-.active{
+  }
+  .active {
     background-color: rgb(2, 74, 2) !important;
     color: white;
-}
-.nav-bar-elm a i{
+  }
+  .nav-bar-elm a i {
     rotate: y 180deg;
     font-size: 20px;
-    color: rgb(255, 255, 255,0.5);
-}
-.main-container .cards-container {
+    color: rgb(255, 255, 255, 0.5);
+  }
+  .main-container .cards-container {
     border: 2px solid red;
     height: 60%;
     max-height: 350px;
@@ -118,25 +126,25 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.main-container h3 {
+  }
+  
+  .main-container h3 {
     text-align: center;
     font-size: 2vw;
     color: rgb(15, 5, 108);
     margin: 12px 0px 4px;
-}
-
-.main-container h3 i {
+  }
+  
+  .main-container h3 i {
     font-size: 15px;
     color: black;
-}
-
-.main-container h3 i#first-arrow {
+  }
+  
+  .main-container h3 i#first-arrow {
     rotate: y 180deg;
-}
-
-.main-container .updates-container {
+  }
+  
+  .main-container .updates-container {
     height: 50px;
     width: 93%;
     border: 2px solid red;
@@ -144,18 +152,18 @@ body {
     border-radius: 15px;
     overflow: hidden;
     display: flex;
-}
-
-.main-container .updates-container img {
+  }
+  
+  .main-container .updates-container img {
     display: inline-block;
     height: 100%;
     width: 7%;
     border-right: 2px solid rgb(160, 7, 7);
     background-color: grey;
-    padding: 2px; 
-}
-
-.main-container .updates-container p {
+    padding: 2px;
+  }
+  
+  .main-container .updates-container p {
     height: 100%;
     width: 100%;
     background-color: rgba(135, 207, 235, 0.6);
@@ -163,8 +171,8 @@ body {
     font-size: 18px;
     line-height: 40px;
     word-spacing: 5px;
-}
-.back-to-top{
+  }
+  .back-to-top {
     display: none;
     height: 54px;
     width: 54px;
@@ -174,18 +182,18 @@ body {
     position: absolute;
     top: 673px;
     right: 100px;
-}
-.back-to-top i{
+  }
+  .back-to-top i {
     display: inline-block;
     font-size: 55px;
     margin: auto;
     cursor: pointer;
-}
-.back-to-top i:hover{
+  }
+  .back-to-top i:hover {
     color: green;
-}
-/* styling for cards */
-.cards-container .card {
+  }
+  /* styling for cards */
+  .cards-container .card {
     width: 45%;
     height: 45%;
     border: 1px solid red;
@@ -193,18 +201,18 @@ body {
     background-color: rgb(165, 56, 74, 0.5);
     position: relative;
     margin-bottom: 8px;
-}
-
-.card h2 {
+  }
+  
+  .card h2 {
     width: 90%;
     text-align: center;
     font-size: 2vw;
     color: rgb(43, 4, 90);
     margin: auto;
     margin-bottom: 15px;
-}
-
-.card .icon-container {
+  }
+  
+  .card .icon-container {
     position: absolute;
     right: 40%;
     top: 22%;
@@ -212,49 +220,49 @@ body {
     height: 60px;
     padding: 4px;
     border-radius: 50%;
-}
-
-.card .icon-container img {
+  }
+  
+  .card .icon-container img {
     height: 100%;
     width: 100%;
-}
-
-.card .status-container,
-.card .info {
+  }
+  
+  .card .status-container,
+  .card .info {
     height: 45px;
     width: 90%;
     margin: 4px auto 2px;
-}
-
-.card .status-container {
+  }
+  
+  .card .status-container {
     display: flex;
     justify-content: space-between;
     border: none;
-}
-
-.card .status-container div {
+  }
+  
+  .card .status-container div {
     width: 30%;
     height: 100%;
     border: 2px solid rgb(74, 3, 3);
     border-radius: 10px;
     overflow: hidden;
-}
-
-.card .status-container h4 {
+  }
+  
+  .card .status-container h4 {
     font-size: 12px;
     text-align: center;
     margin: 2px 0 5px;
-}
-
-.card .status-container div p {
+  }
+  
+  .card .status-container div p {
     font-size: 11px;
     text-align: center;
     color: white;
     background-color: black;
     padding: 2px 0;
-}
-
-.card .info {
+  }
+  
+  .card .info {
     height: 45px;
     margin-top: 6px;
     border-radius: 10px;
@@ -262,12 +270,12 @@ body {
     text-align: center;
     padding: 2px;
     overflow: hidden;
-}
-
-/* styling for cards ends here */
-
-/* search page styling */
-.search-page-container{
+  }
+  
+  /* styling for cards ends here */
+  
+  /* search page styling */
+  .search-page-container {
     border: 2px solid red;
     height: 85% !important;
     max-height: 440px !important;
@@ -276,26 +284,26 @@ body {
     border-radius: 15px;
     display: block !important;
     position: relative;
-}
-.parent-container-search{
+  }
+  .parent-container-search {
     width: 90%;
     margin: 4px auto;
     position: relative;
-}
-.search-container{
+  }
+  .search-container {
     position: relative;
     overflow: hidden;
-}
-.search-container input{
+  }
+  .search-container input {
     width: 100%;
     height: 40px;
     font-size: 18px;
     padding-left: 15px;
-}
-.search-container input:focus{
-    background-color : aliceblue;
-}
-.search-container button{
+  }
+  .search-container input:focus {
+    background-color: aliceblue;
+  }
+  .search-container button {
     background-color: transparent;
     color: grey;
     font-size: 2vw;
@@ -305,12 +313,12 @@ body {
     right: 5px;
     cursor: pointer;
     border: none;
-}
-.search-container button:hover{
+  }
+  .search-container button:hover {
     color: green;
     font-size: 2.2vw;
-}
-.parent-container-search .result-container-search{
+  }
+  .parent-container-search .result-container-search {
     width: 99.8%;
     max-height: 200px;
     position: absolute;
@@ -318,52 +326,52 @@ body {
     z-index: 1;
     overflow-y: auto;
     background-color: white;
-}
-.result-container-search ul{
+  }
+  .result-container-search ul {
     list-style-type: none;
-}
-.result-container-search ul li{
+  }
+  .result-container-search ul li {
     font-size: 18px;
     background-color: white;
     padding: 2px 6px 2px;
     border-bottom: 1px solid grey;
     cursor: pointer;
-}
-.result-container-search ul li:hover{
+  }
+  .result-container-search ul li:hover {
     background-color: rgb(179, 216, 248);
     cursor: pointer;
-}
-.heading-container{
+  }
+  .heading-container {
     display: flex;
     margin-top: 5px;
     background-color: beige;
-}
-.heading-container h2{
+  }
+  .heading-container h2 {
     width: 90%;
     text-align: center;
     font-size: 3vw;
     color: rgb(21, 135, 236);
     padding: 5px;
     overflow: hidden;
-}
-
-.heading-container .fav-span{
+  }
+  
+  .heading-container .fav-span {
     width: 10%;
     color: goldenrod;
     font-size: 25px;
     background-color: transparent;
     border: none;
     cursor: pointer;
-}
-.heading-container .fav-span:hover{
+  }
+  .heading-container .fav-span:hover {
     font-size: 28px;
-}
-.search-page-container .card-search{
-    width: 90% ;
+  }
+  .search-page-container .card-search {
+    width: 90%;
     height: 300px;
     margin: 10px auto 2px;
-}
-.card-search .icon-container {
+  }
+  .card-search .icon-container {
     position: absolute;
     right: 45%;
     top: 1%;
@@ -371,48 +379,276 @@ body {
     height: 60px;
     padding: 4px;
     border-radius: 50%;
-}
-.card-search .status-container h4{
-    font-size: 20px; 
-
-}
-.card-search .status-container div {
+  }
+  .card-search .status-container h4 {
+    font-size: 20px;
+  }
+  .card-search .status-container div {
     height: 60px;
     margin: 5px 0px;
-}
-.card-search .status-container div p{
+  }
+  .card-search .status-container div p {
     height: 23px;
     text-align: center;
     color: white;
     font-size: 18px;
-}
-.card-search .info{
+  }
+  .card-search .info {
     height: 210px;
     margin-top: 29px !important;
     padding: 3px;
     display: flex;
     justify-content: space-evenly;
-}
-.card-search .info div{
+  }
+  .card-search .info div {
     width: 49.5%;
     height: 99%;
-    
-}
-.card-search .info div:first-child{
+  }
+  .card-search .info div:first-child {
     border-right: 3px solid green;
-}
-.card-search .info div:last-child{
+  }
+  .card-search .info div:last-child {
     margin-left: 15px !important;
-}
-.card-search .info div p{
+  }
+  .card-search .info div p {
     height: 25px;
     margin: 7px 0px;
     text-align: left;
     font-size: 18px;
     overflow: hidden;
-}
+  }
+  .search-page-data {
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    color: green;
+    float: right;
+    background-color: yellow;
+    margin-right: 40px;
+    border-radius: 10px;
+  }
+  
+  /* search page styling ends here*/
+  
+  @media screen and (max-width: 1200px) {
+    .main-container {
+      width: 85%;
+    }
+  }
+  /* Responsive styles for screens smaller than 900px */
+  @media screen and (max-width: 900px) {
 
-/* search page styling ends here*/
-
-/* Responsive for tablets*/
-    
+    .main-container {
+      width: 98%;
+    }
+    .main-container h1 {
+      font-size: 6vw;
+    }
+    .main-container .fa-bars {
+      font-size: 5vw;
+    }
+    .main-container .slogan {
+      font-size: 3vw;
+    }
+    .nav-bar-elm a {
+      font-size: 3vw;
+    }
+    .cards-container .card {
+      font-size: 16px;
+    }
+    .main-container h3,
+    .main-container .updates-container p {
+      font-size: 3vw;
+    }
+    .main-container h3 i {
+      font-size: 2vw;
+    }
+    .card h2 {
+      font-size: 22px;
+    }
+    .card h2 i {
+      font-size: 18px;
+    }
+    .card .status-container,
+    .card .info {
+      height: 52px;
+      font-size: 18px;
+    }
+    .card .status-container h4 {
+      font-size: 16px;
+    }
+    .card .status-container div {
+      width: 120px;
+    }
+    .card .status-container div p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Responsive styles for tablets smaller than 768px */
+  @media screen and (max-width: 768px) {
+    body {
+      height: auto;
+    }
+    .main-container {
+      width: 98%;
+      height: auto;
+      max-height: max-content;
+      overflow: auto;
+    }
+    .main-container h1 {
+      font-size: 7vw;
+    }
+    .main-container .fa-bars {
+      font-size: 6vw;
+    }
+    .main-container .slogan {
+      font-size: 4vw;
+    }
+    .nav-bar-elm a {
+      width: 22%;
+      font-size: 4vw;
+    }
+    .main-container h3,
+    .main-container .updates-container p {
+      font-size: 4vw;
+    }
+    .main-container h3 i {
+      font-size: 3vw;
+    }
+    .main-container .cards-container {
+      height: auto;
+      max-height: max-content;
+    }
+  
+    .cards-container .card {
+      width: 90%;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Responsive styles for screens smaller than 430px */
+  @media screen and (max-width: 430px) {
+    .main-container {
+      width: 99.9%;
+      min-width: 100vw;
+      border-radius: 0px;
+      border: none;
+    }
+    .main-container h1 {
+      font-size: 35px;
+      margin-bottom: 8px;
+    }
+    .main-container .fa-bars {
+      font-size: 28px;
+      left: 10px;
+      top: 6px;
+    }
+    .main-container .slogan {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    .nav-bar-elm a {
+      width: 29%;
+      height: 30px;
+      font-size: 18px;
+    }
+    .nav-bar-elm a i {
+      display: none;
+    }
+    .main-container .cards-container {
+      height: auto;
+      width: 98%;
+      max-height: max-content;
+      min-width: none;
+    }
+  
+    .cards-container .card {
+      width: 97%;
+      margin-top: 10px;
+      height: auto;
+    }
+    .main-container h3 {
+      font-size: 20px;
+      margin-top: 6px;
+    }
+    .main-container .updates-container p {
+      font-size: 18px;
+    }
+    .main-container h3 i {
+      font-size: 12px;
+    }
+  
+    .card .status-container,
+    .card .info {
+      height: 54px;
+      width: 96%;
+    }
+    .card .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+    }
+    .card .status-container h4 {
+      font-size: 15px;
+    }
+    .card .status-container div {
+      width: 120px;
+    }
+    .card .status-container div p {
+      font-size: 14px;
+    }
+    .main-container .updates-container {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .main-container .updates-container img {
+      width: 10%;
+    }
+    .main-container .updates-container p {
+      font-size: 16px;
+    }
+    /* home page styling ends here */
+    /* all cities page styling starts here */
+    .card {
+      width: 97% !important;
+    }
+    /* search page styling starts here */
+    .search-page-container {
+      height: auto !important;
+      max-height: max-content !important;
+    }
+    #search-btn i {
+      font-size: 20px;
+    }
+    .heading-container h2 {
+      font-size: 22px;
+    }
+    .heading-container h2 i {
+      font-size: 19px !important;
+    }
+    .heading-container i {
+      font-size: 20px;
+    }
+    .search-page-container .card {
+      margin-bottom: 7px;
+    }
+    .search-page-container .card .status-container div {
+      width: 120px;
+    }
+    .search-page-container .card .icon-container {
+      width: 50px;
+      right: 42%;
+    }
+    .search-page-container .card .info {
+      flex-direction: column;
+      height: auto;
+    }
+    .search-page-container .card .info div {
+      width: 99%;
+      margin-left: 15px;
+    }
+  }
+  
