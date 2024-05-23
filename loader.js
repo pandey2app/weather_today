@@ -204,7 +204,7 @@ function navBar() {
 }
 
 //for changing paragraphs of updates on home page
-function paragraphAnimator() {
+function paragraphAnimator(interval) {
     let i = -1;
     function timer() {
         if (i < len - 1) {
