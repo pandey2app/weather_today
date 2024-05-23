@@ -522,7 +522,7 @@
     }
   
     .cards-container .card {
-      width: 90%;
+      width: 90% !important;
       margin-top: 10px;
     }
   }
