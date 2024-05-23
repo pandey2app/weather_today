@@ -1,9 +1,9 @@
 import City from "./city.js";
 import { clearExistng,favoriteFinder,addData,paragraphAnimator} from "./loader.js";
 import {mainContainer,cardsContainer, homeElm,allCitiesElm,searchCityElm,span,update } from "./loader.js";
-
+let interval = null;
 function renderHome(currentLocation) {
-   
+    clearInterval(interval);
     cardsContainer.className = 'cards-container';
     cardsContainer.style.border = "2px solid red";
     mainContainer.classList.remove('search-class');
@@ -16,7 +16,7 @@ function renderHome(currentLocation) {
     searchCityElm.className = '';
     favoriteFinder();
     addData(currentLocation);
-    paragraphAnimator();
+    interval = paragraphAnimator(interval);
     let updatesHeading = document.createElement('h3');
     let updatesContainer = document.createElement('div');
     updatesContainer.className = 'updates-container';
