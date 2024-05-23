@@ -215,8 +215,14 @@ function paragraphAnimator() {
         span.src = City.updateParagraphs[i].title;
         update.innerText = City.updateParagraphs[i].innerText;
     }
-
-    setInterval(timer, 2000);
+    if (!interval) {
+        interval = setInterval(timer, 2000);
+    } else {
+        clearInterval(interval)
+        interval = null;
+        interval = setInterval(timer, 2000);
+    }
+    return interval;
 }
 
 export {
